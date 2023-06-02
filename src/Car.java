@@ -1,8 +1,11 @@
-public class Car {
+public class Car extends Transport implements TransportService{
 
-    public String modelName;
-    public int wheelsCount;
 
+    public Car(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
+    }
+
+    @Override
     public void updateTyre() {
         System.out.println("Меняем покрышку");
     }
@@ -10,4 +13,6 @@ public class Car {
     public void checkEngine() {
         System.out.println("Проверяем двигатель");
     }
+
+
 }
